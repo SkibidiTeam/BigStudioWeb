@@ -8,7 +8,7 @@
         >vue-cli documentation</a
       >.
     </p>
-    <p>
+    <p class="text-lg font-bold text-neutral-950">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices
       tincidunt enim. Nunc sed porttitor nibh, eu semper sapien. Vestibulum
       suscipit ipsum in nunc tincidunt, a facilisis eros dapibus. Proin sit amet
