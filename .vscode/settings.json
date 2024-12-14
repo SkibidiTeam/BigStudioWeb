@@ -1,0 +1,20 @@
+{
+  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.formatOnType": false,
+  "editor.formatOnPaste": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit",
+    "source.addMissingImports": "explicit"
+  },
+  "files.autoSave": "onFocusChange",
+  "files.exclude": {
+    "**/node_modules": true
+  },
+  "editor.rulers": [120],
+  "vs-code-prettier-eslint.prettierLast": false,
+  "eslint.validate": ["vue", "javascript", "typescript"],
+  "prettier.configPath": ".prettierrc.json",
+  }
