@@ -1,9 +1,7 @@
 <script lang="ts" setup></script>
 
 <template>
-  <component :is="$route.meta.layout || 'div'">
-    <RouterView />
-  </component>
+  <div><h2>This is a header</h2></div>
 </template>
 
 <style scoped></style>

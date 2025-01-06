@@ -1,20 +1,13 @@
 {
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
-  "editor.formatOnSaveMode": "file",
-  "editor.formatOnType": false,
-  "editor.formatOnPaste": false,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "tsconfig.json": "tsconfig.*.json, env.d.ts",
+    "vite.config.*": "jsconfig*, vitest.config.*, cypress.config.*, playwright.config.*",
+    "package.json": "package-lock.json, pnpm*, .yarnrc*, yarn*, .eslint*, eslint*, .prettier*, prettier*, .editorconfig"
+  },
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit",
-    "source.fixAll.stylelint": "explicit",
-    "source.addMissingImports": "explicit"
+    "source.fixAll": "explicit"
   },
-  "files.autoSave": "onFocusChange",
-  "files.exclude": {
-    "**/node_modules": true
-  },
-  "editor.rulers": [120],
-  "vs-code-prettier-eslint.prettierLast": false,
-  "eslint.validate": ["vue", "javascript", "typescript"],
-  "prettier.configPath": ".prettierrc.json"
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
