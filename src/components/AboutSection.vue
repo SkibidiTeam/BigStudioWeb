@@ -13,13 +13,21 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
       </h4>
       <h6 class="about-section__item about-section__item--contact">Liên hệ với chúng tôi ở:</h6>
       <div class="about-section__item about-section__item--list-icon">
-        <a href="https://www.youtube.com/" target="_blank">
+        <a
+          class="about-section__item--icon-youtube"
+          href="https://www.youtube.com/"
+          target="_blank"
+        >
           <font-awesome-icon :icon="['fab', 'youtube']" />
         </a>
-        <a href="https://www.youtube.com/" target="_blank">
+        <a
+          class="about-section__item--icon-facebook"
+          href="https://www.youtube.com/"
+          target="_blank"
+        >
           <font-awesome-icon :icon="['fab', 'square-facebook']" />
         </a>
-        <a href="#contact">
+        <a class="about-section__item--icon-google" href="#contact">
           <font-awesome-icon :icon="['fab', 'google']" />
         </a>
       </div>
@@ -67,5 +75,14 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 }
 .about-section__item--list-icon a {
   font-size: 32px;
+}
+.about-section__item--icon-youtube:hover {
+  color: red;
+}
+.about-section__item--icon-facebook:hover {
+  color: #3366ff;
+}
+.about-section__item--icon-google:hover {
+  color: #db4a39;
 }
 </style>
