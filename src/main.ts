@@ -29,5 +29,15 @@ app.use(Vue3Toastify, {
 app.use(createPinia())
 app.use(MotionPlugin)
 app.use(router)
+router.afterEach((to) => {
+  if (to.hash) {
+    const element = document.querySelector(to.hash)
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+      })
+    }
+  }
+})
 
 app.mount('#app')

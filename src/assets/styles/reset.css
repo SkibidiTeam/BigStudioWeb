@@ -16,7 +16,8 @@ header,
 hgroup,
 menu,
 nav,
-section {
+section,
+a {
   display: block;
 }
 body {
@@ -40,4 +41,10 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+  cursor: pointer;
 }

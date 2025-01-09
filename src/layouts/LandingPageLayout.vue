@@ -5,9 +5,7 @@ import LandingPageHeader from './components/LandingPageHeader.vue'
 <template>
   <div class="h-screen">
     <LandingPageHeader />
-    <div class="pt-[63px]">
-      <RouterView />
-    </div>
+    <RouterView />
   </div>
 </template>
 

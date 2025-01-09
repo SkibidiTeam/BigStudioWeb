@@ -3,7 +3,6 @@
 <template>
   <component :is="$route.meta.layout || 'div'">
     <RouterView />
-    <p>Test</p>
   </component>
 </template>
 

@@ -1,21 +1,33 @@
 <script lang="ts" setup>
-const navItems = [
-  { message: 'GIỚI THIỆU' },
-  { message: 'TẦM NHÌN' },
-  { message: 'NGHỆ SỸ' },
-  { message: 'SẢN PHẨM' },
-  { message: 'TIN TỨC' },
-  { message: 'LIÊN HỆ' },
+interface INavItem {
+  message: string
+  id: string
+}
+
+const navItems: INavItem[] = [
+  { message: 'GIỚI THIỆU', id: '#introduce' },
+  { message: 'TẦM NHÌN', id: '#vision' },
+  { message: 'NGHỆ SĨ', id: '#artists' },
+  { message: 'SẢN PHẨM', id: '#products' },
+  { message: 'ĐỐI TÁC', id: '#partners' },
+  { message: 'TIN TỨC', id: '#news' },
+  { message: 'LIÊN HỆ', id: '#contact' },
 ]
 </script>
 
 <template>
   <div class="header-component-wrapper">
     <div class="header-component container">
-      <img class="header-logo" src="https://acventertainment.com/img/nav-logo.png" alt="logo" />
+      <a href="/">
+        <img class="header-logo" src="https://acventertainment.com/img/nav-logo.png" alt="logo" />
+      </a>
       <ul class="link-component">
-        <li class="link-component-item text-sm text-white" v-for="navItem in navItems">
-          {{ navItem.message }}
+        <li
+          v-for="navItem in navItems"
+          :key="navItem.id"
+          class="link-component-item text-sm text-white"
+        >
+          <router-link :to="navItem.id"> {{ navItem.message }}</router-link>
         </li>
       </ul>
     </div>
@@ -26,7 +38,7 @@ const navItems = [
 .header-component-wrapper {
   background-color: #000;
   height: 70px;
-  padding: 15px 0 10px 0;
+  padding: 20px 0 10px 0;
   position: fixed;
   display: flex;
   justify-content: center;
@@ -51,8 +63,10 @@ const navItems = [
   margin-right: 20px;
 }
 .link-component-item {
-  padding: 15px;
   cursor: pointer;
   text-transform: uppercase;
+}
+.link-component-item a {
+  padding: 15px;
 }
 </style>
