@@ -10,8 +10,17 @@ import Vue3Toastify, { type ToastContainerOptions } from 'vue3-toastify'
 
 import { MotionPlugin } from '@vueuse/motion'
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { far } from '@fortawesome/free-regular-svg-icons'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(fas, far, fab)
+
 const app = createApp(App)
 
+app.component('font-awesome-icon', FontAwesomeIcon)
 app.use(Vue3Toastify, {
   autoClose: 5000,
   hideProgressBar: true,
