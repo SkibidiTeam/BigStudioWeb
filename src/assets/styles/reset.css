@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  line-height: 1.5;
 }
 /* HTML5 display-role reset for older browsers */
 article,

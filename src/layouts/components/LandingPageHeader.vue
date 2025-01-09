@@ -37,7 +37,7 @@ const navItems: INavItem[] = [
 <style scoped>
 .header-component-wrapper {
   background-color: #000;
-  height: 70px;
+  height: 80px;
   padding: 20px 0 10px 0;
   position: fixed;
   display: flex;

@@ -8,7 +8,7 @@
 
 <style>
 @media (min-width: 1024px) {
-  #vision {
+  #products {
     min-height: 100vh;
     display: flex;
     align-items: center;
