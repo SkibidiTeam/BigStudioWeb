@@ -12,6 +12,7 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
+    background-color: #1f2641;
   }
 }
 </style>
