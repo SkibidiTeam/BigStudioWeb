@@ -1,8 +1,8 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div id="vision">
-    <p>VisionSection</p>
+  <div id="contact">
+    <p>Contact</p>
   </div>
 </template>
 
@@ -12,6 +12,7 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
+    background-color: #1f2641;
   }
 }
 </style>
