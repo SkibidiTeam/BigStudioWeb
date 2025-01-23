@@ -1,5 +1,6 @@
 import '@/assets/styles/reset.css'
 import '@/assets/styles/global.css'
+import '@mdi/font/css/materialdesignicons.css'
 
 import App from '@/App.vue'
 import { createApp } from 'vue'
@@ -30,6 +31,9 @@ const app = createApp(App)
 const vuetify = createVuetify({
   components,
   directives,
+  icons: {
+    defaultSet: 'mdi',
+  },
 })
 
 app.component('font-awesome-icon', FontAwesomeIcon)
