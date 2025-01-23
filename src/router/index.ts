@@ -1,4 +1,6 @@
 import LandingPageLayout from '@/layouts/LandingPageLayout.vue'
+import AdminPageLayout from '@/layouts/AdminPageLayout.vue'
+
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -9,6 +11,18 @@ const router = createRouter({
       name: 'landing-page',
       component: () => import('@/views/LandingPage.vue'),
       meta: { layout: LandingPageLayout, isAuth: false },
+    },
+    {
+      path: '/admin/login',
+      name: 'admin-login',
+      component: () => import('@/views/Admin/LoginPage.vue'),
+      meta: { isAuth: false },
+    },
+    {
+      path: '/admin/achievements',
+      name: 'admin-achievements',
+      component: () => import('@/views/Admin/AchievementsPage.vue'),
+      meta: { isAuth: false, layout: AdminPageLayout },
     },
   ],
 })

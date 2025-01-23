@@ -11,6 +11,12 @@ import Vue3Toastify, { type ToastContainerOptions } from 'vue3-toastify'
 
 import { MotionPlugin } from '@vueuse/motion'
 
+// Vuetify
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
+
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
@@ -20,6 +26,11 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 library.add(fas, far, fab)
 
 const app = createApp(App)
+
+const vuetify = createVuetify({
+  components,
+  directives,
+})
 
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.use(Vue3Toastify, {
@@ -40,4 +51,4 @@ router.afterEach((to) => {
   }
 })
 
-app.mount('#app')
+app.use(vuetify).mount('#app')
