@@ -19,7 +19,11 @@ const navItems: INavItem[] = [
   <div class="header-component-wrapper">
     <div class="header-component container">
       <a href="/">
-        <img class="header-logo" src="https://acventertainment.com/img/nav-logo.png" alt="logo" />
+        <img
+          class="header-logo"
+          src="https://res.cloudinary.com/dbinjkjko/image/upload/v1737685602/Logo/Logo_hnhfju.jpg"
+          alt="logo"
+        />
       </a>
       <ul class="link-component">
         <li

@@ -5,6 +5,9 @@ const props = withDefaults(
   defineProps<{
     quantityText?: string
     title?: string
+    fontAwsText: string[]
+    backgroundColor: string
+    boxShadow: string
   }>(),
   {
     quantityText: '',
@@ -14,9 +17,12 @@ const props = withDefaults(
 </script>
 
 <template>
-  <div class="achievement-item text-white">
+  <div
+    class="achievement-item text-white"
+    :style="{ backgroundColor: props.backgroundColor, boxShadow: props.boxShadow }"
+  >
     <div class="achievement-icon">
-      <font-awesome-icon :icon="['fab', 'youtube']" size="3x" />
+      <font-awesome-icon :icon="props.fontAwsText" size="3x" />
     </div>
     <span class="achievement-quantity">{{ props.quantityText }}</span>
     <span class="achievement-title">{{ props.title }}</span>
@@ -26,13 +32,11 @@ const props = withDefaults(
 <style>
 @media (min-width: 1024px) {
   .achievement-item {
-    background-color: #e85f70;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     padding: 50px;
-    transition: all 0.5s ease;
-    box-shadow: 0 0 51px rgba(232, 95, 112, 0.74);
+    transition: all 0.6s ease;
   }
   .achievement-item:hover {
     transform: scale(1.06);
